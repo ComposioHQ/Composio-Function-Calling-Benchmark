@@ -1,0 +1,240 @@
+[
+  {
+    "name": "get_spaces",
+    "description": "View the Spaces available in a Workspace.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "team_id": {
+          "type": "string",
+          "description": "The ID of the team"
+        },
+        "archived": {
+          "type": "boolean",
+          "description": "A flag to decide whether to include archived spaces or not"
+        }
+      },
+      "required": ["team_id", "archived"]
+    }
+  },
+  {
+    "name": "create_space",
+    "description": "Add a new Space to a Workspace.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "team_id": {
+          "type": "string",
+          "description": "The ID of the team"
+        },
+        "name": {
+          "type": "string",
+          "description": "The name of the new space"
+        },
+        "multiple_assignees": {
+          "type": "boolean",
+          "description": "Enable or disable multiple assignees for tasks within the space"
+        },
+        "features": {
+          "type": "object",
+          "description": "Enabled features within the space",
+          "properties": {
+            "due_dates": {
+              "type": "object",
+              "description": "Due dates feature settings",
+              "properties": {
+                "enabled": { "type": "boolean" },
+                "start_date": { "type": "boolean" },
+                "remap_due_dates": { "type": "boolean" },
+                "remap_closed_due_date": { "type": "boolean" }
+              }
+            },
+            "time_tracking": {
+              "type": "object",
+              "description": "Time tracking feature settings",
+              "properties": {
+                "enabled": { "type": "boolean" }
+              }
+            }
+          }
+        }
+      },
+      "required": ["team_id", "name", "multiple_assignees", "features"]
+    }
+  },
+  {
+    "name": "get_space",
+    "description": "View the details of a specific Space in a Workspace.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "space_id": {
+          "type": "string",
+          "description": "The ID of the space"
+        }
+      },
+      "required": ["space_id"]
+    }
+  },
+  {
+    "name": "update_space",
+    "description": "Rename, set the Space color, and enable ClickApps for a Space.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "space_id": {
+          "type": "string",
+          "description": "The ID of the space"
+        },
+        "name": {
+          "type": "string",
+          "description": "The new name of the space"
+        },
+        "color": {
+          "type": "string",
+          "description": "The color used for the space"
+        },
+        "private": {
+          "type": "boolean",
+          "description": "A flag to determine if the space is private or not"
+        },
+        "admin_can_manage": {
+          "type": "boolean",
+          "description": "A flag to determine if the administrator can manage the space or not"
+        },
+        "multiple_assignees": {
+          "type": "boolean",
+          "description": "Enable or disable multiple assignees for tasks within the space"
+        },
+        "features": {
+          "type": "object",
+          "description": "Enabled features within the space",
+          "properties": {
+            "due_dates": {
+              "type": "object",
+              "description": "Due dates feature settings",
+              "properties": {
+                "enabled": { "type": "boolean" },
+                "start_date": { "type": "boolean" },
+                "remap_due_dates": { "type": "boolean" },
+                "remap_closed_due_date": { "type": "boolean" }
+              }
+            },
+            "time_tracking": {
+              "type": "object",
+              "description": "Time tracking feature settings",
+              "properties": {
+                "enabled": { "type": "boolean" }
+              }
+            }
+          }
+        }
+      },
+      "required": [
+        "space_id",
+        "name",
+        "color",
+        "private",
+        "admin_can_manage",
+        "multiple_assignees",
+        "features"
+      ]
+    }
+  },
+  {
+    "name": "delete_space",
+    "description": "Delete a Space from your Workspace.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "space_id": {
+          "type": "string",
+          "description": "The ID of the space"
+        }
+      },
+      "required": ["space_id"]
+    }
+  },
+  {
+    "name": "delete_space",
+    "description": "Delete a Space from your Workspace.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "space_id": {
+          "type": "string",
+          "description": "The ID of the space"
+        }
+      },
+      "required": ["space_id"]
+    }
+  },
+  {
+    "name": "create_space_tag",
+    "description": "Add a new task Tag to a Space.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "space_id": {
+          "type": "string",
+          "description": "The ID of the space"
+        },
+        "tag": {
+          "type": "object",
+          "description": "The properties of the tag to create",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The name of the tag"
+            },
+            "tag_fg": {
+              "type": "string",
+              "description": "The foreground color of the tag"
+            },
+            "tag_bg": {
+              "type": "string",
+              "description": "The background color of the tag"
+            }
+          }
+        }
+      },
+      "required": ["space_id", "tag"]
+    }
+  },
+  {
+    "name": "delete_space_tag",
+    "description": "Delete a task Tag from a Space.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "space_id": {
+          "type": "string",
+          "description": "The ID of the space"
+        },
+        "tag_name": {
+          "type": "string",
+          "description": "The name of the tag to delete"
+        },
+        "tag": {
+          "type": "object",
+          "description": "The properties of the tag to delete",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The name of the tag"
+            },
+            "tag_fg": {
+              "type": "string",
+              "description": "The foreground color of the tag"
+            },
+            "tag_bg": {
+              "type": "string",
+              "description": "The background color of the tag"
+            }
+          }
+        }
+      },
+      "required": ["space_id", "tag_name", "tag"]
+    }
+  }
+]
