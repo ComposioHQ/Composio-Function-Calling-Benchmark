@@ -1,0 +1,93 @@
+can you stragther up a  function schema?
+
+  {
+    "name": "create_space",
+    "description": "Add a new Space to a Workspace.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "team_id": {
+          "type": "string",
+          "description": "The ID of the team"
+        },
+        "name": {
+          "type": "string",
+          "description": "The name of the new space"
+        },
+        "multiple_assignees": {
+          "type": "boolean",
+          "description": "Enable or disable multiple assignees for tasks within the space"
+        },
+        "features": {
+          "type": "object",
+          "description": "Enabled features within the space",
+          "properties": {
+            "due_dates": {
+              "type": "object",
+              "description": "Due dates feature settings",
+              "properties": {
+                "enabled": { "type": "boolean" },
+                "start_date": { "type": "boolean" },
+                "remap_due_dates": { "type": "boolean" },
+                "remap_closed_due_date": { "type": "boolean" }
+              }
+            },
+            "time_tracking": {
+              "type": "object",
+              "description": "Time tracking feature settings",
+              "properties": {
+                "enabled": { "type": "boolean" }
+              }
+            }
+          }
+        }
+      },
+      "required": ["team_id", "name", "multiple_assignees", "features"]
+    }
+  },
+
+
+to 
+
+   {
+    "name": "create_space",
+    "description": "Add a new Space to a Workspace.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "team_id": {
+          "type": "string",
+          "description": "The ID of the team"
+        },
+        "name": {
+          "type": "string",
+          "description": "The name of the new space"
+        },
+        "multiple_assignees": {
+          "type": "boolean",
+          "description": "Enable or disable multiple assignees for tasks within the space"
+        },
+        "features__due_dates__enabled": {
+          "type": "boolean",
+          "description": "Due dates feature settings__Enabled features within the space"
+        },        
+        "features__due_dates__start_date": {
+          "type": "boolean",
+          "description": "remap_due_dates__Due dates feature settings__Enabled features within the space"
+        },        
+        "features__due_dates__remap_due_dates": {
+          "type": "boolean",
+          "description": "remap_due_dates__Due dates feature settings__Enabled features within the space"
+        },        
+        "features__due_dates__remap_closed_due_date": {
+          "type": "boolean",
+          "description": "remap_closed_due_date__enabled__Due dates feature settings__Enabled features within the space"
+        },
+        "features__time_tracking__enabled": {
+          "type": "boolean",
+          "description": "enabled__Due dates feature settings__Enabled features within the space"
+        },
+      },
+      "required": ["team_id", "name", "multiple_assignees", "features"]
+    }
+  },

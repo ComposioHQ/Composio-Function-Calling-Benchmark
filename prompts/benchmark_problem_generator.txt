@@ -1,0 +1,27 @@
+I have these fdunctionalities to interact with Clickup.
+Give me 5 different scenarios, that will end up with using any of these functionalities. The stories shoud sy=tart wityh a random person ande their situateion. It should not clearly mention wxactly with functionality is necessary, but will give enough context to decide. 
+
+* Actually we will conduct the ability to use these tools, to give 5 situations where these tools will be needed, as well as their solutions. 
+* You must drop values of the input parameters with the stories.
+* The solution will be one single line just mentioning which of the tool should be used.
+
+get_spaces(team_id:string, archived:boolean)
+create_space(team_id:string, name:string, multiple_assignees:boolean, features:(due_dates:(enabled:boolean, start_date:boolean, remap_due_dates:boolean, remap_closed_due_date:boolean), time_tracking:(enabled:boolean)))
+get_space(space_id:string)
+update_space(space_id:string, name:string, color:string, private:boolean, admin_can_manage:boolean, multiple_assignees:boolean, features:(due_dates:(enabled:boolean, start_date:boolean, remap_due_dates:boolean, remap_closed_due_date:boolean), time_tracking:(enabled:boolean)))
+delete_space(space_id:string)
+get_space_tags(space_id:string)
+create_space_tag(space_id:string, tag:(name:string, tag_fg:string, tag_bg:string))
+delete_space_tag(space_id:string, tag_name:string, tag:(name:string, tag_fg:string, tag_bg:string))
+
+Example:
+
+ Jordan, a team lead, notices that the project space for their current software development project in ClickUp is not accurately reflecting the project's new direction after a pivot. The space's name and settings need to be updated to match the new project goals and guidelines. Like updating the color to green and managements status of their space with if "alnhakf658udslj" of the admin from true to false.  In the previous message they had decided they will complete the tasks as small teams. The name should also reflect thir abilities in tech.
+
+Solution: update_space(space_id="alnhakf658udslj", name="Tech_Masters", color="#00FE00, private=False, admin_can_manage = False, multiple_assignees = True, features)
+
+Add such questions, but even harder(Must mention all the parameters of the fucntion that is to be called, but subtly throughout the story)
+
+Make more scenerios, more complex. We want to take the tast at higher complexity level, to even put some false or trap type context, make the contexts bigger so that the determination and parameter extraction takes more skill.
+
+Each should result to only one functopn call.
