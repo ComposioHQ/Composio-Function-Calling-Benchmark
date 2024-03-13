@@ -155,20 +155,21 @@
       "required": ["space_id"]
     }
   },
-  {
-    "name": "delete_space",
-    "description": "Delete a Space from your Workspace.",
-    "parameters": {
-      "type": "object",
-      "properties": {
-        "space_id": {
-          "type": "string",
-          "description": "The ID of the space"
-        }
-      },
-      "required": ["space_id"]
-    }
-  },
+
+{
+      "name": "get_space_tags",
+      "description": "View the task Tags available in a Space.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "space_id": {
+            "type": "string",
+            "description": "The ID of the space"
+          }
+        },
+        "required": ["space_id"]
+      }
+    },
   {
     "name": "create_space_tag",
     "description": "Add a new task Tag to a Space.",

@@ -62,50 +62,6 @@
       "required": ["team_id", "name", "multiple_assignees", "features"]
     }
   },
-
-   {
-    "name": "create_space",
-    "description": "Add a new Space to a Workspace.",
-    "parameters": {
-      "type": "object",
-      "properties": {
-        "team_id": {
-          "type": "string",
-          "description": "The ID of the team"
-        },
-        "name": {
-          "type": "string",
-          "description": "The name of the new space"
-        },
-        "multiple_assignees": {
-          "type": "boolean",
-          "description": "Enable or disable multiple assignees for tasks within the space"
-        },
-        "features__due_dates__enabled": {
-          "type": "boolean",
-          "description": "Due dates feature settings__Enabled features within the space"
-        },        
-        "features__due_dates__start_date": {
-          "type": "boolean",
-          "description": "remap_due_dates__Due dates feature settings__Enabled features within the space"
-        },        
-        "features__due_dates__remap_due_dates": {
-          "type": "boolean",
-          "description": "remap_due_dates__Due dates feature settings__Enabled features within the space"
-        },        
-        "features__due_dates__remap_closed_due_date": {
-          "type": "boolean",
-          "description": "remap_closed_due_date__enabled__Due dates feature settings__Enabled features within the space"
-        },
-        "features__time_tracking__enabled": {
-          "type": "boolean",
-          "description": "enabled__Due dates feature settings__Enabled features within the space"
-        },
-      },
-      "required": ["team_id", "name", "multiple_assignees", "features"]
-    }
-  },
-
   {
     "name": "get_space",
     "description": "View the details of a specific Space in a Workspace.",
@@ -199,20 +155,21 @@
       "required": ["space_id"]
     }
   },
-  {
-    "name": "delete_space",
-    "description": "Delete a Space from your Workspace.",
-    "parameters": {
-      "type": "object",
-      "properties": {
-        "space_id": {
-          "type": "string",
-          "description": "The ID of the space"
-        }
-      },
-      "required": ["space_id"]
-    }
-  },
+
+{
+      "name": "get_space_tags",
+      "description": "View the task Tags available in a Space.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "space_id": {
+            "type": "string",
+            "description": "The ID of the space"
+          }
+        },
+        "required": ["space_id"]
+      }
+    },
   {
     "name": "create_space_tag",
     "description": "Add a new task Tag to a Space.",
