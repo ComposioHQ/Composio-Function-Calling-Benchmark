@@ -1,15 +1,15 @@
 [
     {
-        "description": "Retrives information of all the spaces available in user's Clickup Workspace. Example Call:\n```python\nget_spaces({'team_id': 'a1b2c3d4', 'archived': False})\n```\n    ",
+        "description": "Retrives information of all the spaces available in user's Clickup Workspace.",
         "name": "get_spaces",
         "parameters": {
             "properties": {
                 "archived": {
-                    "description": "A flag to decide whether to include archived spaces or not",
+                    "description": "A flag to decide whether to include archived spaces or not \nExample:  True, False. Default: True",
                     "type": "boolean"
                 },
                 "team_id": {
-                    "description": "The ID of the team",
+                    "description": "The ID of the team \nExample:  'abc123', 'def456'",
                     "type": "string"
                 }
             },
@@ -21,40 +21,40 @@
         }
     },
     {
-        "description": "Creates a new ClickUp space. Example Call:\n```python\ncreate_space ({\n  'team_id': 'abc123',\n  'name': 'NewWorkspace',\n  'multiple_assignees': True,\n  'features__due_dates__enabled': True,\n  'features__due_dates__start_date': False,\n  'features__due_dates__remap_due_dates': False,\n  'features__due_dates__remap_closed_due_date': False,\n  'features__time_tracking__enabled': True\n})\n```\n",
+        "description": "Creates a new ClickUp space",
         "name": "create_space",
         "parameters": {
             "properties": {
                 "features__due_dates__enabled": {
-                    "description": "If due date feature is enabled within the space. Default: True",
+                    "description": "If due date feature is enabled within the space. \nExample: True, False \nDefault: True",
                     "type": "boolean"
                 },
                 "features__due_dates__remap_closed_due_date": {
-                    "description": "If remapping closed date feature in due dates is available within the space. Default: False",
+                    "description": "If remapping closed date feature in due dates is available within the space. \nExample: True, False \nDefault: False",
                     "type": "boolean"
                 },
                 "features__due_dates__remap_due_dates": {
-                    "description": "If remapping due date feature in due dates is available within the space. Default: False",
+                    "description": "If remapping due date feature in due dates is available within the space. \nExample: True, False \nDefault: False",
                     "type": "boolean"
                 },
                 "features__due_dates__start_date": {
-                    "description": "If start date feature in due dates is available within the space. Default: False",
+                    "description": "If start date feature in due dates is available within the space. \nExample: True, False \nDefault: False",
                     "type": "boolean"
                 },
                 "features__time_tracking__enabled": {
-                    "description": "If time tracking feature is available within the space. Default: True",
+                    "description": "If time tracking feature is available within the space. \nExample: True, False \nDefault: True",
                     "type": "boolean"
                 },
                 "multiple_assignees": {
-                    "description": "Enable or disable multiple assignees for tasks within the space",
+                    "description": "Enable or disable multiple assignees for tasks within the space \nExample: True, False. Default: True",
                     "type": "boolean"
                 },
                 "name": {
-                    "description": "The name of the new space to create",
+                    "description": "The name of the new space to create \nExample:  'NewWorkspace', 'TempWorkspace'",
                     "type": "string"
                 },
                 "team_id": {
-                    "description": "The ID of the team",
+                    "description": "The ID of the team \nExample:  'abc123', 'def456' ",
                     "type": "string"
                 }
             },
@@ -72,12 +72,12 @@
         }
     },
     {
-        "description": "Retrives information of a specific Clickup space. Example Call:\n```python\nget_space({'space_id': 's12345'})\n```\n",
+        "description": "Retrives information of a specific Clickup space",
         "name": "get_space",
         "parameters": {
             "properties": {
                 "space_id": {
-                    "description": "The ID of the space to retrieve details",
+                    "description": "The ID of the space to retrieve details \nExample:  'abc123', 'def456'",
                     "type": "string"
                 }
             },
@@ -88,20 +88,20 @@
         }
     },
     {
-        "description": "Modifies name, settings the Space color, and assignee management Space. Example Call:\n```python\nupdate_space({\n  'space_id': 's12345',\n  'name': 'UpdatedWorkspace',\n  'color': '#f0f0f0',\n  'private': True,\n  'admin_can_manage': False,\n  'multiple_assignees': True,\n  'features__due_dates__enabled': True,\n  'features__due_dates__start_date': False,\n  'features__due_dates__remap_due_dates': False,\n  'features__due_dates__remap_closed_due_date': False,\n  'features__time_tracking__enabled': True\n})\n```\n\n",
+        "description": "Modifies name, settings the Space color, and assignee management Space.",
         "name": "update_space",
         "parameters": {
             "properties": {
                 "admin_can_manage": {
-                    "description": "A flag to determine if the administrator can manage the space or not",
+                    "description": "A flag to determine if the administrator can manage the space or not \nExample:  True, False. Default: True",
                     "type": "boolean"
                 },
                 "color": {
-                    "description": "The color used for the space",
+                    "description": "The color used for the space \nExample:  '#FF0000', '#00FF00'",
                     "type": "string"
                 },
                 "features__due_dates__enabled": {
-                    "description": "If due date feature is enabled within the space. Default: True",
+                    "description": "If due date feature is enabled within the space. \nExample:  True, False \nDefault: True",
                     "type": "boolean"
                 },
                 "features__due_dates__remap_closed_due_date": {
@@ -117,23 +117,23 @@
                     "type": "boolean"
                 },
                 "features__time_tracking__enabled": {
-                    "description": "If time tracking feature is available within the space. Default: True",
+                    "description": "If time tracking feature is available within the space. \nExample:  True, False \nDefault: True",
                     "type": "boolean"
                 },
                 "multiple_assignees": {
-                    "description": "Enable or disable multiple assignees for tasks within the space",
+                    "description": "Enable or disable multiple assignees for tasks within the space \nExample:  True, False. Default: True",
                     "type": "boolean"
                 },
                 "name": {
-                    "description": "The new name of the space",
+                    "description": "The new name of the space \nExample:  'NewWorkspace', 'TempWorkspace'",
                     "type": "string"
                 },
                 "private": {
-                    "description": "A flag to determine if the space is private or not",
+                    "description": "A flag to determine if the space is private or not \nExample:  True, False. Default: False",
                     "type": "boolean"
                 },
                 "space_id": {
-                    "description": "The ID of the space",
+                    "description": "The ID of the space to update \nExample:  'abc123', 'def456'",
                     "type": "string"
                 }
             },
@@ -154,12 +154,12 @@
         }
     },
     {
-        "description": "Delete an existing space from user's ClickUp Workspace. Example Call:\n```python\ndelete_space({'space_id': 's12345'})\n```\n    ",
+        "description": "Delete an existing space from user's ClickUp Workspace",
         "name": "delete_space",
         "parameters": {
             "properties": {
                 "space_id": {
-                    "description": "The ID of the space to delete",
+                    "description": "The ID of the space to delete \nExample:  'abc123', 'def456'",
                     "type": "string"
                 }
             },
@@ -170,12 +170,12 @@
         }
     },
     {
-        "description": "Retrives all the Tags assigned on all the tasks in a Space. Example Call:\n```python\nget_space_tags({'space_id': 's12345'})\n```\n",
+        "description": "Retrives all the Tags assigned on all the tasks in a Space.",
         "name": "get_space_tags",
         "parameters": {
             "properties": {
                 "space_id": {
-                    "description": "The ID of the space to retrieve all the tags from",
+                    "description": "The ID of the space to retrieve all the tags from \nExample:  'abc123', 'def456'",
                     "type": "string"
                 }
             },
@@ -186,24 +186,24 @@
         }
     },
     {
-        "description": "        Assigns a customized Tag in a ClickUp Space. Example Call:\n```python\ncreate_space_tag({\n  'space_id': 's12345',\n  'tag__name': 'Important',\n  'tag__tag_bg': '#ff0000',\n  'tag__tag_fg': '#ffffff'\n})\n```\n        ",
+        "description": "Assigns a customized Tag in a ClickUp Space.",
         "name": "create_space_tag",
         "parameters": {
             "properties": {
                 "space_id": {
-                    "description": "The ID of the space",
+                    "description": "The ID of the space \nExample:  'abc123', 'def456'",
                     "type": "string"
                 },
                 "tag__name": {
-                    "description": "The name of the tag to assign",
+                    "description": "The name of the tag to assign \nExample:  'NewTag', 'TempTag'",
                     "type": "string"
                 },
                 "tag__tag_bg": {
-                    "description": "The background color of the tag to assign",
+                    "description": "The background color of the tag to assign \nExample:  '#FF0000', '#00FF00'",
                     "type": "string"
                 },
                 "tag__tag_fg": {
-                    "description": "The foreground(text) color of the tag to assign",
+                    "description": "The foreground(text) color of the tag to assign \nExample:  '#FF0000', '#00FF00'",
                     "type": "string"
                 }
             },
@@ -217,28 +217,28 @@
         }
     },
     {
-        "description": "    Deletes a specific tag previously assigned in a space. Example Call:\n```python\ndelete_space_tag({\n  'space_id': 's12345',\n  'tag_name': 'Important',\n  'tag__name': 'Important',\n  'tag__tag_bg': '#ff0000',\n  'tag__tag_fg': '#ffffff'\n})\n```\n    ",
+        "description": "Deletes a specific tag previously assigned in a space.",
         "name": "delete_space_tag",
         "parameters": {
             "properties": {
                 "space_id": {
-                    "description": "The ID of the space",
+                    "description": "The ID of the space to delete \nExample:  'abc123', 'def456'",
                     "type": "string"
                 },
                 "tag__name": {
-                    "description": "The name of the tag to delete",
+                    "description": "The name of the tag to delete \nExample:  'NewTag', 'TempTag'",
                     "type": "string"
                 },
                 "tag__tag_bg": {
-                    "description": "The background color of the tag to delete",
+                    "description": "The background color of the tag to delete \nExample:  '#FF0000', '#00FF00', '#0000FF'",
                     "type": "string"
                 },
                 "tag__tag_fg": {
-                    "description": "The foreground color of the tag to delete",
+                    "description": "The foreground color of the tag to delete \nExample:  '#FF0000', '#00FF00', '#0000FF'",
                     "type": "string"
                 },
                 "tag_name": {
-                    "description": "The name of the tag to delete",
+                    "description": "The name of the tag to delete \nExample:  'NewTag', 'TempTag'",
                     "type": "string"
                 }
             },

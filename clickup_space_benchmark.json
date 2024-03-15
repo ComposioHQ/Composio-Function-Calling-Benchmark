@@ -20,7 +20,7 @@
     "solution": "delete_space_tag(space_id=\"qa789\", tag_name=\"MinorIssue\", tag=(name=\"MinorIssue\", tag_fg=\"#000000\", tag_bg=\"#FFFFE0\"))"
   },
   {
-    "prompt": "Thomas, head of the backend team, notices that their public ClickUp space for backend development named \"Backend_Development_Space\" (space ID \"bkend345\") still allows multiple assignees per task, which has been causing confusion and accountability issues. The space had features like time racking, start date and remapping due dates available. He decides to update the space to disallow multiple assignees while keeping other settings unchanged.",
+    "prompt": "Thomas, head of the backend team, notices that their public ClickUp space for backend development named \"Backend_Development_Space\" (space ID \"bkend345\") still allows multiple assignees per task, which has been causing confusion and accountability issues. The space had features like time tracking, start date and remapping due dates available with a black theme. He decides to update the space to disallow multiple assignees while keeping other settings unchanged.",
     "solution": "update_space(space_id=\"bkend345\", name=\"Backend_Development_Space\", color=\"#000000\", private=False, admin_can_manage=True, multiple_assignees=False, features=(due_dates=(enabled=True, start_date=True, remap_due_dates=True, remap_closed_due_date=False), time_tracking=(enabled=True)))"
   },
   {
@@ -118,5 +118,85 @@
   {
     "prompt": "Realizing the importance of clear and efficient communication within the project spaces on ClickUp for the digital transformation team at Pathway Technologies, leadership has decided to implement a new tagging system within the \"DigitalTrans2023\" space. This new system will include a tag specifically designed to indicate tasks that are pivotal to the next phase in their digital overhaul, named \"MilestoneCritical\". The tag will feature a deep blue background \"#00008B\" to stand out against the space's color scheme, with contrasting white text \"#FFFFFF\" for easy readability. The creation of this tag is aimed at enhancing task visibility and prioritization as the team works towards critical project milestones.",
     "solution": "create_space_tag(space_id=\"DigitalTrans2023\", tag=(name=\"MilestoneCritical\", tag_fg=\"#FFFFFF\", tag_bg=\"#00008B\"))"
-  }
+  },
+  {
+    "prompt": "Lucas, head of the customer success department, is working on a new initiative to better cater to customer queries. He needs to create a new space within ClickUp for his team, identified by the team ID \"custsuccess2020\". The space will be named \"Customer Engagement Hub\" and should allow assigning multiple team members to tasks to promote collaboration. Time tracking is a critical feature for this initiative, but there is no requirement for due dates or start dates since responsiveness is more valued than adherence to timelines.",
+    "solution": "create_space(team_id=\"custsuccess2020\", name=\"Customer Engagement Hub\", multiple_assignees=True, features=(due_dates=(enabled=False, start_date=False, remap_due_dates=False, remap_closed_due_date=False), time_tracking=(enabled=True)))"
+},
+{
+    "prompt": "The social media team at a tech startup is restructuring their ClickUp spaces following a change in their content strategy. The space with ID \"social123\" needs to be updated to include the startup's new branding color, a light blue with hex code \"#ADD8E6\". The space name must also be changed to \"Social Media Command Center\". While the space should remain public for cross-departmental transparency, the startup's policy stipulates that only space admins should directly manage it.",
+    "solution": "update_space(space_id=\"social123\", name=\"Social Media Command Center\", color=\"#ADD8E6\", private=False, admin_can_manage=True, multiple_assignees=True, features=(due_dates=(enabled=True, start_date=False, remap_due_dates=False, remap_closed_due_date=False), time_tracking=(enabled=True)))"
+},
+{
+    "prompt": "The branding department at a large corporation has a number of tags within their ClickUp space (ID: \"branddept301\") for various initiatives. However, some tags are out of date and not in use anymore. The team manager wants to clear out unused tags to avoid confusion. One such tag to be removed is \"OldCampaign\", which has a tag foreground color of \"#808080\" and a background color of \"#F0F8FF\".",
+    "solution": "delete_space_tag(space_id=\"branddept301\", tag_name=\"OldCampaign\", tag=(name=\"OldCampaign\", tag_fg=\"#808080\", tag_bg=\"#F0F8FF\"))"
+},
+{
+    "prompt": "In a recent operational shift, a SaaS company's engineering team decided to start tracking effort and time investment for each project phase. To support this, their existing ClickUp space, identified by \"engteam777\", requires an additional tag to label tasks that are time-sensitive. This new tag should be called \"Time-Sensitive\", with the foreground color set to \"#FFFFFF\" and a background color of \"#FF4500\" for high visibility.",
+    "solution": "create_space_tag(space_id=\"engteam777\", tag=(name=\"Time-Sensitive\", tag_fg=\"#FFFFFF\", tag_bg=\"#FF4500\"))"
+},
+{
+    "prompt": "The product development team has grown significantly, leading to an overflow of tags in their primary ClickUp space, identified by \"proddev808\". After a careful review, the team leads have decided to remove the \"BetaFeature\" tag. This tag used for marking tasks related to beta features has a bright yellow background, with hex code \"#FFFF00\", and a black foreground, with hex code \"#000000\".",
+    "solution": "delete_space_tag(space_id=\"proddev808\", tag_name=\"BetaFeature\", tag=(name=\"BetaFeature\", tag_fg=\"#000000\", tag_bg=\"#FFFF00\"))"
+},
+{
+    "prompt": "Marie, an HR manager, is configuring a new space in ClickUp for the human resources department of her company, holding the team ID \"hrdept201\". The space, to be entitled \"Employee Relations\", should be private to ensure confidential HR discussions and documents are secure. The tasks within this space will be complex, often requiring multiple assignees, and the space will initially not need time tracking or due dates enabled.",
+    "solution": "create_space(team_id=\"hrdept201\", name=\"Employee Relations\", multiple_assignees=True, features=(due_dates=(enabled=False, start_date=False, remap_due_dates=False, remap_closed_due_date=False), time_tracking=(enabled=False)))"
+},
+{
+    "prompt": "A rapidly growing e-commerce business needs to retrieve all information from their ClickUp space dedicated to inventory management to assess the effectiveness of their current practices. The space has been instrumental in tracking inventory levels, and the ID associated with this space is \"ecominv500\".",
+    "solution": "get_space(space_id=\"ecominv500\")"
+},
+{
+    "prompt": "The operations team at an educational institution is planning to decommission some of their older ClickUp spaces that were used for tracking facility upgrades. One such space, with the space ID \"eduop876\", is now unnecessary as the facility upgrades have been completed and documented elsewhere.",
+    "solution": "delete_space(space_id=\"eduop876\")"
+},
+{
+    "prompt": "Natalie, a team coordinator at a non-profit, is tasked with setting up a new ClickUp space to better manage their community outreach projects. She must use their team ID \"npo123\" to create the space named \"Community Driven Projects 2023\". The space should allow for multiple assignees per task to promote teamwork and should have due dates enabled with start dates to help monitor progress towards project milestones.",
+    "solution": "create_space(team_id=\"npo123\", name=\"Community Driven Projects 2023\", multiple_assignees=True, features=(due_dates=(enabled=True, start_date=True, remap_due_dates=False, remap_closed_due_date=False), time_tracking=(enabled=False)))"
+},
+{
+    "prompt": "With a revamp in the sales strategy, a global sales team has been asked to make their ClickUp space, associated with the space ID \"globalsales400\", private to protect company strategies and to update the space color to represent urgency with a bright red, hex code \"#FF0000\". The name of the space is to remain \"International Sales Division\", and it should still allow for only space admins to directly manage its settings.",
+    "solution": "update_space(space_id=\"globalsales400\", name=\"International Sales Division\", color=\"#FF0000\", private=True, admin_can_manage=True, multiple_assignees=True, features=(due_dates=(enabled=True, start_date=True, remap_due_dates=False, remap_closed_due_date=False), time_tracking=(enabled=True)))"
+},
+{
+  "prompt": "Samantha, the head of the UI/UX department, has been informed that the digital design space they've been using on ClickUp is due for a refresh to better align with the company's rebranding efforts. The space's ID is \"uiux1020\", and its current name is \"Digital Design Team\". The new specifications include changing the color theme to a vibrant purple represented by the hex code \"#800080\", setting the workspace as private to strengthen data security, and enabling time tracking for accountability. However, admins will no longer be able to manage the space directly, reflecting a shift towards a more self-managed team structure.",
+  "solution": "update_space(space_id=\"uiux1020\", name=\"Digital Design Team\", color=\"#800080\", private=True, admin_can_manage=False, multiple_assignees=True, features=(due_dates=(enabled=True, start_date=False, remap_due_dates=False, remap_closed_due_date=False), time_tracking=(enabled=True)))"
+},
+{
+  "prompt": "The content strategy team is looking to consolidate their digital presence analysis under a new ClickUp space. The team has its unique identifier, \"cntstr1234\", and the new space is to be titled \"Content Analysis Q2\". One of the critical goals for this period is to allow team members to track individual contributions, meaning multiple assignees per task should be permitted. In addition, the team intends to avoid any due date tracking as timelines are flexible at this stage.",
+  "solution": "create_space(team_id=\"cntstr1234\", name=\"Content Analysis Q2\", multiple_assignees=True, features=(due_dates=(enabled=True, start_date=False, remap_due_dates=False, remap_closed_due_date=False), time_tracking=(enabled=False)))"
+},
+{
+  "prompt": "The mobile application development team at TechSpark is planning to deploy a new set of features to its ClickUp development space. Before implementing these features, the team lead wants to review the current list of tags in use within the space identified by the ID \"appdev300\". Gathering this information is required to avoid duplication and also ensure any necessary updates can be aligned with the new release.",
+  "solution": "get_space_tags(space_id=\"appdev300\")"
+},
+{
+  "prompt": "During a recent project review meeting, the analytics team at DataWise noted that the space dedicated to their predictive modeling projects lacked a specific tag to highlight urgent data discrepancies. The space, marked with the ID \"datamodel404\", requires a new tag named \"Urgent Discrepancy\", featuring a bold red color for the text, using hex code \"#FF0000\", and a background color of gray, with hex code \"#808080\".",
+  "solution": "create_space_tag(space_id=\"datamodel404\", tag=(name=\"Urgent Discrepancy\", tag_fg=\"#FF0000\", tag_bg=\"#808080\"))"
+},
+{
+  "prompt": "After finalizing the quarterly audit, the finance team decides to retire the budget forecasting ClickUp space, as they've transitioned to a different platform for financial planning. The space, known as \"finforecast345\", is to be permanently removed since it's outdated and no longer in use.",
+  "solution": "delete_space(space_id=\"finforecast345\")"
+},
+{
+  "prompt": "Alex, the lead graphic designer, recently created a tag called \"LowPriority\" in their design space (ID: \"gfxdes678\") to classify the non-urgent tasks. However, this caused confusion as they already had a similar tag named \"Backlog\". He decides it's best to remove the \"LowPriority\" tag, which is styled with a foreground color \"#D3D3D3\" and a background color of \"#FFFFFF\".",
+  "solution": "delete_space_tag(space_id=\"gfxdes678\", tag_name=\"LowPriority\", tag=(name=\"LowPriority\", tag_fg=\"#D3D3D3\", tag_bg=\"#FFFFFF\"))"
+},
+{
+  "prompt": "The client support division is creating a new workspace for this quarter's support tickets and knowledge base updates. The space is for team with the ID \"supdiv210\", and it’s been decided to call it \"Q2 Support Updates\". The leadership wants to make sure all tasks are tracked, so enabling due dates with the option to set a start date is required. They don't want multiple assignees but do want the flexibility to remap due dates if the tickets are rerouted between agents.",
+  "solution": "create_space(team_id=\"supdiv210\", name=\"Q2 Support Updates\", multiple_assignees=False, features=(due_dates=(enabled=True, start_date=True, remap_due_dates=True, remap_closed_due_date=True), time_tracking=(enabled=True)))"
+},
+{
+  "prompt": "Having completed a major milestone, the video game development team wants to preserve the details of the current project phase by archiving their ClickUp space. Before they do so, the manager desires to retrieve the complete current configuration of the space marked by the ID \"gamedev909\"—from name and color to privacy settings and features—to ensure they can replicate it for future phases.",
+  "solution": "get_space(space_id=\"gamedev909\")"
+},
+{
+  "prompt": "With a new marketing strategy in place, the digital outreach team is directed to rename their main ClickUp space to \"Market Outreach 2023\". The objective is to set a more dynamic and modern tone for the year's campaigns. The space identified by the ID \"mktoutreach768\" will also need to reflect the company's new visual identity by adopting a navy blue color, hex code \"#000080\", and updating it to be private for confidential strategizing sessions.",
+  "solution": "update_space(space_id=\"mktoutreach768\", name=\"Market Outreach 2023\", color=\"#000080\", private=True, admin_can_manage=True, multiple_assignees=True, features=(due_dates=(enabled=True, start_date=False, remap_due_dates=False, remap_closed_due_date=False), time_tracking=(enabled=True)))"
+},
+{
+  "prompt": "The event management team at Occasions Plus is preparing for a robust lineup of events this coming fall and has opted to set up a dedicated ClickUp space for it. The space should help them track stages of planning and post-event activities. Named \"Fall Events 2023\", this space, intended for team ID \"eventeam500\", needs to facilitate clear individual responsibilities, with a requirement for only one individual to be assigned to each task. Timelines are vital to event planning, thereby due dates need to be enabled with the option to indicate a start date.",
+  "solution": "create_space(team_id=\"eventeam500\", name=\"Fall Events 2023\", multiple_assignees=False, features=(due_dates=(enabled=True, start_date=True, remap_due_dates=False, remap_closed_due_date=False), time_tracking=(enabled=True)))"
+}
 ]
