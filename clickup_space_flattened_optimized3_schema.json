@@ -5,11 +5,11 @@
         "parameters": {
             "properties": {
                 "archived": {
-                    "description": "A flag to decide whether to include archived spaces or not \nExample:  True, False. Default: True",
+                    "description": "A flag to decide whether to include archived spaces or not. Default: True",
                     "type": "boolean"
                 },
                 "team_id": {
-                    "description": "The ID of the team \nExample:  'abc123', 'def456'",
+                    "description": "The ID of the team",
                     "type": "string"
                 }
             },
@@ -26,35 +26,35 @@
         "parameters": {
             "properties": {
                 "features__due_dates__enabled": {
-                    "description": "If due date feature is enabled within the space. \nExample: True, False \nDefault: True",
+                    "description": "If due date feature is enabled within the space. Default: True",
                     "type": "boolean"
                 },
                 "features__due_dates__remap_closed_due_date": {
-                    "description": "If remapping closed date feature in due dates is available within the space. \nExample: True, False \nDefault: False",
+                    "description": "If remapping closed date feature in due dates is available within the space. Default: False",
                     "type": "boolean"
                 },
                 "features__due_dates__remap_due_dates": {
-                    "description": "If remapping due date feature in due dates is available within the space. \nExample: True, False \nDefault: False",
+                    "description": "If remapping due date feature in due dates is available within the space. Default: False",
                     "type": "boolean"
                 },
                 "features__due_dates__start_date": {
-                    "description": "If start date feature in due dates is available within the space. \nExample: True, False \nDefault: False",
+                    "description": "If start date feature in due dates is available within the space. Default: False",
                     "type": "boolean"
                 },
                 "features__time_tracking__enabled": {
-                    "description": "If time tracking feature is available within the space. \nExample: True, False \nDefault: True",
+                    "description": "If time tracking feature is available within the space. Default: True",
                     "type": "boolean"
                 },
                 "multiple_assignees": {
-                    "description": "Enable or disable multiple assignees for tasks within the space \nExample: True, False. Default: True",
+                    "description": "Enable or disable multiple assignees for tasks within the space. Default: True",
                     "type": "boolean"
                 },
                 "name": {
-                    "description": "The name of the new space to create \nExample:  'NewWorkspace', 'TempWorkspace'",
+                    "description": "The name of the new space to create",
                     "type": "string"
                 },
                 "team_id": {
-                    "description": "The ID of the team \nExample:  'abc123', 'def456' ",
+                    "description": "The ID of the team",
                     "type": "string"
                 }
             },
@@ -77,7 +77,7 @@
         "parameters": {
             "properties": {
                 "space_id": {
-                    "description": "The ID of the space to retrieve details \nExample:  'abc123', 'def456'",
+                    "description": "The ID of the space to retrieve details",
                     "type": "string"
                 }
             },
@@ -93,15 +93,15 @@
         "parameters": {
             "properties": {
                 "admin_can_manage": {
-                    "description": "A flag to determine if the administrator can manage the space or not \nExample:  True, False. Default: True",
+                    "description": "A flag to determine if the administrator can manage the space or not. Default: True",
                     "type": "boolean"
                 },
                 "color": {
-                    "description": "The color used for the space \nExample:  '#FF0000', '#00FF00'",
+                    "description": "The color used for the space",
                     "type": "string"
                 },
                 "features__due_dates__enabled": {
-                    "description": "If due date feature is enabled within the space. \nExample:  True, False \nDefault: True",
+                    "description": "If due date feature is enabled within the space. Default: True",
                     "type": "boolean"
                 },
                 "features__due_dates__remap_closed_due_date": {
@@ -117,23 +117,23 @@
                     "type": "boolean"
                 },
                 "features__time_tracking__enabled": {
-                    "description": "If time tracking feature is available within the space. \nExample:  True, False \nDefault: True",
+                    "description": "If time tracking feature is available within the space. Default: True",
                     "type": "boolean"
                 },
                 "multiple_assignees": {
-                    "description": "Enable or disable multiple assignees for tasks within the space \nExample:  True, False. Default: True",
+                    "description": "Enable or disable multiple assignees for tasks within the space. Default: True",
                     "type": "boolean"
                 },
                 "name": {
-                    "description": "The new name of the space \nExample:  'NewWorkspace', 'TempWorkspace'",
+                    "description": "The new name of the space",
                     "type": "string"
                 },
                 "private": {
-                    "description": "A flag to determine if the space is private or not \nExample:  True, False. Default: False",
+                    "description": "A flag to determine if the space is private or not. Default: False",
                     "type": "boolean"
                 },
                 "space_id": {
-                    "description": "The ID of the space to update \nExample:  'abc123', 'def456'",
+                    "description": "The ID of the space",
                     "type": "string"
                 }
             },
@@ -159,7 +159,7 @@
         "parameters": {
             "properties": {
                 "space_id": {
-                    "description": "The ID of the space to delete \nExample:  'abc123', 'def456'",
+                    "description": "The ID of the space to delete",
                     "type": "string"
                 }
             },
@@ -175,7 +175,7 @@
         "parameters": {
             "properties": {
                 "space_id": {
-                    "description": "The ID of the space to retrieve all the tags from \nExample:  'abc123', 'def456'",
+                    "description": "The ID of the space to retrieve all the tags from",
                     "type": "string"
                 }
             },
@@ -191,19 +191,19 @@
         "parameters": {
             "properties": {
                 "space_id": {
-                    "description": "The ID of the space \nExample:  'abc123', 'def456'",
+                    "description": "The ID of the space",
                     "type": "string"
                 },
                 "tag__name": {
-                    "description": "The name of the tag to assign \nExample:  'NewTag', 'TempTag'",
+                    "description": "The name of the tag to assign",
                     "type": "string"
                 },
                 "tag__tag_bg": {
-                    "description": "The background color of the tag to assign \nExample:  '#FF0000', '#00FF00'",
+                    "description": "The background color of the tag to assign",
                     "type": "string"
                 },
                 "tag__tag_fg": {
-                    "description": "The foreground(text) color of the tag to assign \nExample:  '#FF0000', '#00FF00'",
+                    "description": "The foreground(text) color of the tag to assign",
                     "type": "string"
                 }
             },
@@ -222,23 +222,23 @@
         "parameters": {
             "properties": {
                 "space_id": {
-                    "description": "The ID of the space to delete \nExample:  'abc123', 'def456'",
+                    "description": "The ID of the space",
                     "type": "string"
                 },
                 "tag__name": {
-                    "description": "The name of the tag to delete \nExample:  'NewTag', 'TempTag'",
+                    "description": "The name of the tag to delete",
                     "type": "string"
                 },
                 "tag__tag_bg": {
-                    "description": "The background color of the tag to delete \nExample:  '#FF0000', '#00FF00', '#0000FF'",
+                    "description": "The background color of the tag to delete",
                     "type": "string"
                 },
                 "tag__tag_fg": {
-                    "description": "The foreground color of the tag to delete \nExample:  '#FF0000', '#00FF00', '#0000FF'",
+                    "description": "The foreground color of the tag to delete",
                     "type": "string"
                 },
                 "tag_name": {
-                    "description": "The name of the tag to delete \nExample:  'NewTag', 'TempTag'",
+                    "description": "The name of the tag to delete",
                     "type": "string"
                 }
             },
