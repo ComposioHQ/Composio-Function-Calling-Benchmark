@@ -45,18 +45,22 @@ Currently we have experimented with:
 
 All these different optimizations has been tested with the models, and each of the techniques are explained [here](https://blog.composio.dev/gpt-4-function-calling-example/).
 
-| Approach | Run 1 | Run 2  | Run 3  | Average Accuracy  |
-|---|---|---|---|---|
-| No System Prompt  | 0.36  | 0.36  | 0.36  | 0.36  |
-| Flattening Schema  | 0.54  | 0.5  | 0.54  | 0.527  |
-| Flattened Schema + <br>Simple System Prompt  | 0.56  | 0.56  | 0.54  | 0.553  |
-| Flattened Schema + <br>Focused System Prompt  | 0.64  | 0.64  | 0.62  | 0.633  |
-| Flattened Schema + <br>Focused System Prompt containing Schema summary  | 0.64  | 0.62  | 0.66  | 0.64  |
-| Flattened Schema + <br>Focused System Prompt containing Schema summary + <br>Function Name Optimized  | 0.72  | 0.72  | 0.66  | 0.70  |
-| Flattened Schema + <br>Focused System Prompt containing Schema summary + <br>Function Description Optimized  |  0.68  | 0.7  | 0.68  | 0.687  |
-| Flattened Schema + <br>Focused System Prompt containing Schema summary + <br>Function and Parameter Descriptions Optimized  | 0.78  | 0.76  | 0.76  | 0.767  |
-| Flattened Schema + <br>Focused System Prompt containing Schema summary + <br>Function and Parameter Descriptions Optimized + <br>Function Call examples added  | 0.72  | 0.7  | 0.66  | 0.693  |
-| Flattened Schema + <br>Focused System Prompt containing Schema summary + <br>Function and Parameter Descriptions Optimized + <br>Function Parameter examples added  | 0.82  | 0.76  | 0.78  | 0.787  |
+
+||Optimization Approach                                                                                                                                  |`gpt-4-turbo-preview`|`gpt-4-turbo`|`gpt-4-0125-preview`|`claude-3-haiku-20240307`|`claude-3-sonnet-20240229`|`claude-3-opus-20240229`|
+|------|-------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------|-----------|------------------|-----------------------|------------------------|----------------------|
+|1     |No System Prompt                                                                                                                                       |0.36               |0.36       |0.353             |0.48                   |0.6                     |0.42                  |
+|2     |Flattening Schema                                                                                                                                      |0.527              |0.487      |0.533             |0.5                    |0.58                    |0.5                   |
+|3     |Flattened Schema  + <br> Simple System Prompt                                                                                                                |0.553              |0.533      |0.54              |0.54                   |0.6                     |0.54                  |
+|4     |Flattened Schema  + <br> Focused System Prompt                                                                                                               |0.633              |0.633      |0.64              |0.54                   |0.54                    |0.54                  |
+|5     |Flattened Schema  + <br> Focused System Prompt  + <br> Function Name Optimized                                                                                     |0.553              |0.607      |0.587             |0.52                   |0.62                    |0.52                  |
+|6     |Flattened Schema  + <br> Focused System Prompt  + <br> Function Description Optimized                                                                              |0.633              |0.66       |0.673             |0.52                   |0.6                     |0.52                  |
+|7     |Flattened Schema  + <br> Focused System Prompt containing Schema summary                                                                                     |0.64               |0.553      |0.64              |0.46                   |0.62                    |0.46                  |
+|8     |Flattened Schema  + <br> Focused System Prompt containing Schema summary  + <br>  Function Name Optimized                                                          |0.70               |0.707      |0.686             |0.5                    |0.64                    |0.46                  |
+|9     |Flattened Schema  + <br> Focused System Prompt containing Schema summary  + <br>  Function Description Optimized                                                   |0.687              |0.707      |0.68              |0.5                    |0.6                     |0.6                   |
+|10    |Flattened Schema  + <br> Focused System Prompt containing Schema summary  + <br>  Function and Parameter Descriptions Optimized                                    |0.767              |0.767      |0.787             |0.58                   |0.74                    |0.58                  |
+|11    |Flattened Schema  + <br> Focused System Prompt containing Schema summary  + <br>  Function and Parameter Descriptions Optimized  + <br> Function Call examples added     |0.693              |0.6        |0.707             |0.6                    |0.76                    |0.64                  |
+|12    |Flattened Schema  + <br> Focused System Prompt containing Schema summary  + <br>  Function and Parameter Descriptions Optimized  + <br> Function Parameter examples added|0.787              |0.693      |0.787             |0.68                   |0.76                    |0.66                  |
+
 
 ## Contributing
 
