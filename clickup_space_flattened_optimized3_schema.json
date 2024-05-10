@@ -1,6 +1,6 @@
 [
     {
-        "description": "Retrives information of all the spaces available in user's Clickup Workspace.",
+        "description": "Retrives information of all the spaces available in user's Clickup Workspace. Example Call:\n```python\nget_spaces({'team_id': 'a1b2c3d4', 'archived': False})\n```\n    ",
         "name": "get_spaces",
         "parameters": {
             "properties": {
@@ -21,7 +21,7 @@
         }
     },
     {
-        "description": "Creates a new ClickUp space",
+        "description": "Creates a new ClickUp space. Example Call:\n```python\ncreate_space ({\n  'team_id': 'abc123',\n  'name': 'NewWorkspace',\n  'multiple_assignees': True,\n  'features__due_dates__enabled': True,\n  'features__due_dates__start_date': False,\n  'features__due_dates__remap_due_dates': False,\n  'features__due_dates__remap_closed_due_date': False,\n  'features__time_tracking__enabled': True\n})\n```\n",
         "name": "create_space",
         "parameters": {
             "properties": {
@@ -72,7 +72,7 @@
         }
     },
     {
-        "description": "Retrives information of a specific Clickup space",
+        "description": "Retrives information of a specific Clickup space. Example Call:\n```python\nget_space({'space_id': 's12345'})\n```\n",
         "name": "get_space",
         "parameters": {
             "properties": {
@@ -88,7 +88,7 @@
         }
     },
     {
-        "description": "Modifies name, settings the Space color, and assignee management Space.",
+        "description": "Modifies name, settings the Space color, and assignee management Space. Example Call:\n```python\nupdate_space({\n  'space_id': 's12345',\n  'name': 'UpdatedWorkspace',\n  'color': '#f0f0f0',\n  'private': True,\n  'admin_can_manage': False,\n  'multiple_assignees': True,\n  'features__due_dates__enabled': True,\n  'features__due_dates__start_date': False,\n  'features__due_dates__remap_due_dates': False,\n  'features__due_dates__remap_closed_due_date': False,\n  'features__time_tracking__enabled': True\n})\n```\n\n",
         "name": "update_space",
         "parameters": {
             "properties": {
@@ -154,7 +154,7 @@
         }
     },
     {
-        "description": "Delete an existing space from user's ClickUp Workspace",
+        "description": "Delete an existing space from user's ClickUp Workspace. Example Call:\n```python\ndelete_space({'space_id': 's12345'})\n```\n    ",
         "name": "delete_space",
         "parameters": {
             "properties": {
@@ -170,7 +170,7 @@
         }
     },
     {
-        "description": "Retrives all the Tags assigned on all the tasks in a Space.",
+        "description": "Retrives all the Tags assigned on all the tasks in a Space. Example Call:\n```python\nget_space_tags({'space_id': 's12345'})\n```\n",
         "name": "get_space_tags",
         "parameters": {
             "properties": {
@@ -186,7 +186,7 @@
         }
     },
     {
-        "description": "Assigns a customized Tag in a ClickUp Space.",
+        "description": "        Assigns a customized Tag in a ClickUp Space. Example Call:\n```python\ncreate_space_tag({\n  'space_id': 's12345',\n  'tag__name': 'Important',\n  'tag__tag_bg': '#ff0000',\n  'tag__tag_fg': '#ffffff'\n})\n```\n        ",
         "name": "create_space_tag",
         "parameters": {
             "properties": {
@@ -217,7 +217,7 @@
         }
     },
     {
-        "description": "Deletes a specific tag previously assigned in a space.",
+        "description": "    Deletes a specific tag previously assigned in a space. Example Call:\n```python\ndelete_space_tag({\n  'space_id': 's12345',\n  'tag_name': 'Important',\n  'tag__name': 'Important',\n  'tag__tag_bg': '#ff0000',\n  'tag__tag_fg': '#ffffff'\n})\n```\n    ",
         "name": "delete_space_tag",
         "parameters": {
             "properties": {
