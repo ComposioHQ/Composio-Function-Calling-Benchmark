@@ -29,7 +29,7 @@ The benchmark is designed to test the ability of various models to correctly cal
 - [`prompts/`](prompts/): Propmts used to check & modify the Problems and Schema.
 - [`clickup_space_benchmark.json`](clickup_space_benchmark.json): The problems and correct solutions.
 - [`clickup_space_schema.json`](clickup_space_schema.json): Function Schema's that the LLMs use to solve the problems of the Benchmark.
-- `*.ipynb`: Different optimization techniques, applied to the LLMs to check their performance against the Benchmark.
+- `*.ipynb`(in relevant branches): Different optimization techniques, applied to the LLMs to check their performance against the Benchmark.
 
 > We did the all experimentations on notebooks now, as it is easier to keep track of the results.
 
