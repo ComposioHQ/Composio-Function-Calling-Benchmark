@@ -83,7 +83,7 @@ This project is licensed under the terms of the MIT license.
 
 ## About Composio
 
-Composio is an organization dedicated to advancing the field of artificial intelligence. We create benchmarks, develop models, and build tools to push the boundaries of what is possible in AI. Follow us on [Twitter](https://twitter.com/composio) for updates on our latest projects.
+Composio is an organization dedicated to advancing the field of artificial intelligence. We create benchmarks, develop models, and build tools to push the boundaries of what is possible in AI. Follow us on [Twitter](https://twitter.com/composiohq) for updates on our latest projects.
 
 ---
 
