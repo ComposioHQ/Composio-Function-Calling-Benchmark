@@ -38,6 +38,7 @@ The benchmark is designed to test the ability of various models to correctly cal
 We have tested different function calling models,  Resut notebooks of which are stored in each seperate branch. 
 
 Currently we have experimented with:
+* `gpt-4o` - OpenAI - [branch](https://github.com/SamparkAI/Composio-Function-Calling-Benchmark/tree/gpt-4o)
 * `gpt-4-turbo-preview` - OpenAI - [branch](https://github.com/SamparkAI/Composio-Function-Calling-Benchmark/tree/gpt-4-turbo-preview)
 * `gpt-4-turbo` - OpenAI - [branch](https://github.com/SamparkAI/Composio-Function-Calling-Benchmark/tree/gpt-4-turbo)
 * `gpt-4-0125-preview` - OpenAI - [branch](https://github.com/SamparkAI/Composio-Function-Calling-Benchmark/tree/gpt-4-0125-preview)
@@ -55,6 +56,9 @@ Currently we have experimented with:
 
 All these different optimizations has been tested with the models, and each of the techniques are explained [here](https://blog.composio.dev/gpt-4-function-calling-example/).
 
+<img width="1106" alt="Screenshot 2024-05-14 at 12 50 49 AM" src="https://github.com/SamparkAI/Composio-Function-Calling-Benchmark/assets/67541368/26beb636-ffa6-482b-a9cd-629d096b70ff">
+
+All previous Models: 
 
 ||Optimization Approach                                                                                                                                  |`gpt-4-turbo-preview`|`gpt-4-turbo`|`gpt-4-0125-preview`|`claude-3-haiku-20240307`|`claude-3-sonnet-20240229`|`claude-3-opus-20240229`|
 |------|-------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------|-----------|------------------|-----------------------|------------------------|----------------------|
