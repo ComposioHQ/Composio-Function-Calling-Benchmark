@@ -18,7 +18,7 @@ Welcome to the official GitHub repository for the Composio's Function Calling Be
 
 The benchmark is designed to test the ability of various models to correctly call functions based on given prompts, and solve the situation in a ClickUp workspace using one of the given functions. Each question in the benchmark presents a scenario that requires the use of a specific function to solve. The function schemas provided outline the structure and parameters of the functions that can be used.
 
-> Note that, a speciality of this benchmark is, problems are designed to test the abilities of the models to handle real world API structurs, and performance against differnet optimizations.
+> Note that, a speciality of this benchmark is, problems are designed to test the abilities of the models to handle real world API structures, and performance against differnet optimizations.
 
 
 ## Publications
